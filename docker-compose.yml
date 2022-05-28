@@ -4,6 +4,7 @@ services:
   api:
     build:
       context: .
+      dockerfile: api.Dockerfile
     container_name: api
     ports: 
       - "8080:8080"
@@ -11,8 +12,10 @@ services:
       - "db"
 
   db:
-    image: mysql:latest
     container_name: db
+    build:
+      context: .
+      dockerfile: db.Dockerfile
     command: --default-authentication-plugin=mysql_native_password
     restart: unless-stopped
     environment:

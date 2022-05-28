@@ -1,4 +1,4 @@
-module github.com/kardenvan7/my_expenses_planner_backend
+module github.com/kardenvan7/my_expenses_planner_backend_app
 
 go 1.18
 
